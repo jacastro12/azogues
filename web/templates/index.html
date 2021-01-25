@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi app de carros</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container">
+    <h1>MI APLICACIÓN DE CARROS</h1>
+    {# este es mi comentario #}
+    <div class="row">
+        {% for carro in lista_carros %}
+            <div class="col-4">
+                <div class="card">
+                    <img src="{{ carro.imagen.url }}"
+                         width="100%" height="auto" alt="carro mazda">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ carro.nombre }}</h5>
+                        <p><strong>Color: </strong>{{ carro.color }} <br>
+                            <strong>Cantidad: </strong>{{ carro.cantidad }} <br>
+                            <strong>Descripción: </strong>{{ carro.descripcion }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+</body>
+</html>
